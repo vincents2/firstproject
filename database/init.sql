@@ -70,12 +70,12 @@ CREATE TABLE tblMa_Sprachen ( -- tblEmployees_Languages
   idSprache INT NOT NULL REFERENCES tblSprachen(id)
 );
 
-CREATE TABLE tblJa ( -- tblYwo (YWO = Youth Welfare Office)
+CREATE TABLE tblJa ( -- tblYWOs (YWO = Youth Welfare Office)
   id INT PRIMARY KEY AUTO_INCREMENT,
   bez VARCHAR(32) NOT NULL
 );
 
-CREATE TABLE tblJaMa ( -- tblYwoEmployee
+CREATE TABLE tblJaMa ( -- tblYWOsEmployees
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   idJa INT NOT NULL REFERENCES tblJa(id),
   vorname VARCHAR(32),
@@ -126,7 +126,7 @@ CREATE TABLE tblFaelle_Ma ( -- tblCases_Employees
   PRIMARY KEY (idFall,idMa)
 );
 
-CREATE TABLE tblFaelle_JaMa ( -- tblCases_YwoEmployees
+CREATE TABLE tblFaelle_JaMa ( -- tblCases_YWOsEmployees
   idFall INT NOT NULL REFERENCES tblFaelle(id),
   idJaMa INT NOT NULL REFERENCES tblJaMa(id),
   primary key (idFall,idJaMa)
