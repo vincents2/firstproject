@@ -2,7 +2,21 @@ from waitress import serve
 
 
 from firstproject.app import app
-from firstproject.endpoints import faelle
+from firstproject.endpoints import (
+  vertragArten,
+  hilfeArten,
+  bereiche,
+  sprachen,
+  maArten,
+  ma,
+  ma_sprachen,
+  ja,
+  jaMa,
+  faelle,
+  ziele,
+  faelle_ma,
+  faelle_jaMa
+)
 
 
 if __name__ == '__main__':
