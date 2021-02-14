@@ -1,6 +1,14 @@
-import json, datetime
+import json, datetime, mysql.connector
 
-from firstproject.app import db, conn
+
+db = mysql.connector.connect(
+  host='localhost',
+  user='root',
+  password='root',
+  database='dbFirstproject'
+)
+
+conn = db.cursor()
 
 
 def template_post(dbTable: str,dbAttrs: list(),data):
@@ -45,10 +53,6 @@ def template_get_all(dbTable: str,dbKeyAttrs: list(),dbAttrs: list()):
     query += '{},'.format(attr)
   query = query[:-1]
   query += ' FROM {}'.format(dbTable)
-  
-  date = datetime.datetime(2001, 9, 9)
-
-  print(date.isoformat())
 
   conn.execute(query)
   
@@ -86,7 +90,7 @@ def template_get(dbTable: str,dbKeyAttrs: list(),dbAttrs: list(),dbKeyValues: li
   for row in conn.fetchall():
     obj = {}
     for index in range(0, len(dbAllAttrs)):
-      obj[dbAllAttrs[index]] = row[index]
+      obj[dbAllAttrs[index]] = datetime.datetime.combine(row[index], datetime.time.min).isoformat() if isinstance(row[index], datetime.date) else row[index].isoformat() if isinstance(row[index], datetime.datetime) else row[index]
     response.append(obj)
   
   if not response: status = 600

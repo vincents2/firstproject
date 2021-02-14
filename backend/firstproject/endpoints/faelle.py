@@ -6,8 +6,6 @@ from firstproject.endpoints.template import (
   template_put,
   template_delete
 )
-
-
 from firstproject.app import app
 
 

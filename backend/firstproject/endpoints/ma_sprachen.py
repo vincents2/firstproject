@@ -5,14 +5,12 @@ from firstproject.endpoints.template import (
   template_get,
   template_delete
 )
-
-
 from firstproject.app import app
 
 
 dbTable = 'tblMa_Sprachen'
 dbKeyAttrs = ('idMa', 'idSprache')
-dbAttrs = list()
+dbAttrs = ()
 
 
 @app.route('/ma_sprachen/', methods=['POST'])
@@ -22,7 +20,7 @@ def post_ma_sprachen():
 
 
 @app.route('/ma_sprachen/', methods=['GET'])
-def get_ma_sprachen():
+def get_all_ma_sprachen():
   print('[from {}] GET request to {}'.format(request.remote_addr, request.url))
   return template_get_all(dbTable=dbTable,dbKeyAttrs=dbKeyAttrs,dbAttrs=dbAttrs)
 

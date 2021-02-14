@@ -5,14 +5,12 @@ from firstproject.endpoints.template import (
   template_get,
   template_delete
 )
-
-
 from firstproject.app import app
 
 
 dbTable = 'tblFaelle_JaMa'
 dbKeyAttrs = ('idFall', 'idJaMa')
-dbAttrs = list()
+dbAttrs = ()
 
 
 @app.route('/faelle_jaMa/', methods=['POST'])
