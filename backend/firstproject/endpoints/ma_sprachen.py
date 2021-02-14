@@ -3,7 +3,6 @@ from firstproject.endpoints.template import (
   template_post,
   template_get_all,
   template_get,
-  template_put,
   template_delete
 )
 
@@ -12,14 +11,14 @@ from firstproject.app import app
 
 
 dbTable = 'tblMa_Sprachen'
-dbKeyAttrs = ('idMa', 'idSprache') # ?????????????????????????????????
+dbKeyAttrs = ('idMa', 'idSprache')
 dbAttrs = list()
 
 
 @app.route('/ma_sprachen/', methods=['POST'])
 def post_ma_sprachen():
   print('[from {}] POST request to {}'.format(request.remote_addr, request.url))
-  return template_post(dbTable=dbTable,dbAttrs=dbAttrs,data=request.data)
+  return template_post(dbTable=dbTable,dbAttrs=dbKeyAttrs,data=request.data)
 
 
 @app.route('/ma_sprachen/', methods=['GET'])
@@ -32,12 +31,6 @@ def get_ma_sprachen():
 def get_ma_sprachen(id):
   print('[from {}] GET request to {}'.format(request.remote_addr, request.url))
   return template_get(dbTable=dbTable,dbKeyAttrs=dbKeyAttrs,dbAttrs=dbAttrs,dbKeyValues=(id,))
-
-
-@app.route('/ma_sprachen/', methods=['PUT'])
-def put_ma_sprachen():
-  print('[from {}] PUT request to {}'.format(request.remote_addr, request.url))
-  return template_put(dbTable=dbTable,dbKeyAttrs=dbKeyAttrs,dbAttrs=dbAttrs,data=request.data)
 
 
 @app.route('/ma_sprachen/<int:id>/', methods=['DELETE'])

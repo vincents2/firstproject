@@ -107,7 +107,7 @@ def template_put(dbTable: str,dbKeyAttrs: list(),dbAttrs: list(),data):
     status = 500
   
   if status == 200:
-    query = 'UPDATE tblBereiche SET '
+    query = 'UPDATE {} SET '.format(dbTable)
     for index in range(0, len(dbAttrs)):
       query += ('{}=\'{}\',' if isinstance(body[dbAttrs[index]], str) else '{}={},').format(dbAttrs[index], body[dbAttrs[index]])
     query = query[:-1]
