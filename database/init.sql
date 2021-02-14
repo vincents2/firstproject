@@ -1,5 +1,6 @@
 -- database
 
+DROP DATABASE IF EXISTS dbFirstproject;
 CREATE DATABASE IF NOT EXISTS dbFirstproject;
 
 USE dbFirstproject;
@@ -131,3 +132,9 @@ CREATE TABLE tblFaelle_JaMa ( -- tblCases_YWOsEmployees
   idJaMa INT NOT NULL REFERENCES tblJaMa(id),
   primary key (idFall,idJaMa)
 );
+
+-- log
+
+SET global general_log_file = 'C:/Users/inovi/Desktop/firstproject/database/mysql.log';
+SET global general_log = on;
+SET global log_output = file;
