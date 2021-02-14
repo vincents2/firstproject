@@ -48,11 +48,12 @@ def template_get_all(dbTable: str,dbKeyAttrs: list(),dbAttrs: list()):
   status = 200
   dbAllAttrs = dbKeyAttrs + dbAttrs
 
-  query = 'SELECT '
-  for attr in dbAllAttrs:
-    query += '{},'.format(attr)
-  query = query[:-1]
-  query += ' FROM {}'.format(dbTable)
+  query = 'SELECT * FROM {}'.format(dbTable)
+  # query = 'SELECT '
+  # for attr in dbAllAttrs:
+  #   query += '{},'.format(attr)
+  # query = query[:-1]
+  # query += ' FROM {}'.format(dbTable)
 
   conn.execute(query)
   
