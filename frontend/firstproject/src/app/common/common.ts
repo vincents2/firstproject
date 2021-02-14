@@ -81,7 +81,7 @@ export interface Fall extends BaseIdItem {
   archiviert: boolean;
 }
 
-export interface Ziele extends BaseItem {
+export interface Ziel extends BaseItem {
   idFall: number;
 }
 

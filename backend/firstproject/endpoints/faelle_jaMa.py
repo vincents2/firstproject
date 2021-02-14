@@ -25,13 +25,13 @@ def get_all_faelle_jaMa():
   return template_get_all(dbTable=dbTable,dbKeyAttrs=dbKeyAttrs,dbAttrs=dbAttrs)
 
 
-@app.route('/faelle_jaMa/<int:id>/', methods=['GET'])
-def get_faelle_jaMa(id):
+@app.route('/faelle_jaMa/<int:idFall>/', methods=['GET'])
+def get_faelle_jaMa(idFall):
   print('[from {}] GET request to {}'.format(request.remote_addr, request.url))
-  return template_get(dbTable=dbTable,dbKeyAttrs=dbKeyAttrs,dbAttrs=dbAttrs,dbKeyValues=(id,))
+  return template_get(dbTable=dbTable,dbKeyAttrs=dbKeyAttrs,dbAttrs=dbAttrs,dbKeyValues=(idFall,))
 
 
-@app.route('/faelle_jaMa/<int:id>/', methods=['DELETE'])
-def delete_faelle_jaMa(id):
+@app.route('/faelle_jaMa/<int:idFall>/<int:idJaMa>/', methods=['DELETE'])
+def delete_faelle_jaMa(idFall, idJaMa):
   print('[from {}] DELETE request to {}'.format(request.remote_addr, request.url))
-  return template_delete(dbTable=dbTable,dbKeyAttrs=dbKeyAttrs,dbAttrs=dbAttrs,dbKeyValues=(id,))
+  return template_delete(dbTable=dbTable,dbKeyAttrs=dbKeyAttrs,dbAttrs=dbAttrs,dbKeyValues=(idFall, idJaMa))
