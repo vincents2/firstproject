@@ -1,0 +1,3 @@
+2021-02-14T19:58:05.046834Z	   18 Connect	root@localhost on dbFirstproject using SSL/TLS
+2021-02-14T19:58:05.047215Z	   18 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
+2021-02-14T19:58:05.047419Z	   18 Query	SET @@session.autocommit = OFF

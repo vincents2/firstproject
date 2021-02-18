@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Fall, Fall_Ma, Ma, MaArt, Sprache, VertragArt } from '../common/common';
 
 @Component({
   selector: 'app-ma',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaComponent implements OnInit {
 
+  @Input('ma') ma: Ma[] = [];
+  @Input('vertragArten') vertragArten: VertragArt[] = [];
+  @Input('maArten') maArten: MaArt[] = [];
+  @Input('sprachen') sprachen: Sprache[] = [];
+  @Input('faelle_ma') faelle_ma: Fall_Ma[] = [];
+  @Input('faelle') faelle: Fall[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

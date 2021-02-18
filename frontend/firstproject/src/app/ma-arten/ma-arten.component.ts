@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MaArt } from '../common/common';
 
 @Component({
   selector: 'app-ma-arten',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaArtenComponent implements OnInit {
 
+  @Input('maArten') maArten: MaArt[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

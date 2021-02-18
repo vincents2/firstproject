@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  @Output('viewChanged') viewChanged = new EventEmitter();
+
+  view = 'faelle';
+
   constructor() { }
 
   ngOnInit(): void {
+    this.viewChanged.emit(this.view);
   }
 
+  changeView(view: string) {
+    this.view = view;
+    this.viewChanged.emit(this.view);
+  }
 }

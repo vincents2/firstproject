@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Bereich } from '../common/common';
 
 @Component({
   selector: 'app-bereiche',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BereicheComponent implements OnInit {
 
+  @Input('bereiche') bereiche: Bereich[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

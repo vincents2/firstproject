@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { VertragArt } from '../common/common';
 
 @Component({
   selector: 'app-vertrag-arten',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VertragArtenComponent implements OnInit {
 
+  @Input('vertragArten') vertragArten: VertragArt[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

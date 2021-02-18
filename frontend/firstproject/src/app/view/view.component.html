@@ -1,1 +1,61 @@
-<p>view works!</p>
+
+<div class="page">
+  <div class="item">
+    <div [ngSwitch]="view">
+      <div *ngSwitchCase="'faelle'">
+        <app-faelle
+          [faelle]="faelle"
+          [ja]="ja"
+          [bereiche]="bereiche"
+          [hilfeArten]="hilfeArten"
+          [sprachen]="sprachen"
+          [ziele]="ziele"
+          [faelle_ma]="faelle_ma"
+          [faelle_jaMa]="faelle_jaMa"
+          [ma]="ma"
+          [jaMa]="jaMa">
+        </app-faelle>
+      </div>
+      <div *ngSwitchCase="'ja'">
+        <app-ja
+          [ja]="ja">
+        </app-ja>
+      </div>
+      <div *ngSwitchCase="'bereiche'">
+        <app-bereiche
+          [bereiche]="bereiche">
+        </app-bereiche>
+      </div>
+      <div *ngSwitchCase="'hilfeArten'">
+        <app-hilfe-arten
+          [hilfeArten]="hilfeArten">
+        </app-hilfe-arten>
+      </div>
+      <div *ngSwitchCase="'ma'">
+        <app-ma
+          [ma]="ma"
+          [vertragArten]="vertragArten"
+          [maArten]="maArten"
+          [sprachen]="sprachen"
+          [faelle_ma]="faelle_ma"
+          [faelle]="faelle">
+        </app-ma>
+      </div>
+      <div *ngSwitchCase="'maArten'">
+        <app-ma-arten
+          [maArten]="maArten">
+        </app-ma-arten>
+      </div>
+      <div *ngSwitchCase="'vertragArten'">
+        <app-vertrag-arten
+          [vertragArten]="vertragArten">
+        </app-vertrag-arten>
+      </div>
+      <div *ngSwitchCase="'sprachen'">
+        <app-sprachen
+          [sprachen]="sprachen">
+        </app-sprachen>
+      </div>
+    </div>
+  </div>
+</div>

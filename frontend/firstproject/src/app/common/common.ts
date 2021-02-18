@@ -1,4 +1,11 @@
 
+export enum HttpMethod { POST, GET, PUT, DELETE }
+
+export interface SyncItem {
+  method: HttpMethod;
+  item?: any;
+}
+
 interface BaseIdItem {
   id?: number;
   tempId?: number;

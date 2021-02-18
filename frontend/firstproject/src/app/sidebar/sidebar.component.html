@@ -1,1 +1,61 @@
-<p>sidebar works!</p>
+
+<div class="page">
+
+	<div class="item btn-group-vertical btn-block">
+		<button
+			class="btn btn-lg btn-info"
+			[class.active]="view === 'faelle'"
+			(click)="changeView('faelle');">
+			Fälle
+		</button>
+		<button
+			class="btn btn-sm btn-info"
+			[class.active]="view === 'ja'"
+			(click)="changeView('ja');">
+			Jugendämter
+		</button>
+		<button
+			class="btn btn-sm btn-info"
+			[class.active]="view === 'bereiche'"
+			(click)="changeView('bereiche');">
+			Bereiche
+		</button>
+		<button
+			class="btn btn-sm btn-info"
+			[class.active]="view === 'hilfeArten'"
+			(click)="changeView('hilfeArten');">
+			Hilfe-Arten
+		</button>
+	</div>
+
+	<div class="item btn-group-vertical btn-block">
+		<button
+			class="btn btn-lg btn-info"
+			[class.active]="view === 'ma'"
+			(click)="changeView('ma');">
+			Mitarbeiter
+		</button>
+		<button
+			class="btn btn-sm btn-info"
+			[class.active]="view === 'maArten'"
+			(click)="changeView('maArten');">
+			Mitarbeiter-Arten
+		</button>
+		<button
+			class="btn btn-sm btn-info"
+			[class.active]="view === 'vertragArten'"
+			(click)="changeView('vertragArten');">
+			Vertrag-Arten
+		</button>
+	</div>
+
+	<div class="item btn-group-vertical btn-block">
+		<button
+			class="btn btn-md btn-info"
+			[class.active]="view === 'sprachen'"
+			(click)="changeView('sprachen');">
+			Sprachen
+		</button>
+	</div>
+
+</div>

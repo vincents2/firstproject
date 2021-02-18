@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Ja } from '../common/common';
 
 @Component({
   selector: 'app-ja',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JaComponent implements OnInit {
 
+  @Input('ja') ja: Ja[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { HilfeArt } from '../common/common';
 
 @Component({
   selector: 'app-hilfe-arten',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HilfeArtenComponent implements OnInit {
 
+  @Input('hilfeArten') hilfeArten: HilfeArt[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
