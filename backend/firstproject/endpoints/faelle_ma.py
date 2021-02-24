@@ -11,7 +11,7 @@ from firstproject.app import app
 
 dbTable = 'tblFaelle_Ma'
 dbKeyAttrs = ('idFall', 'idMa')
-dbAttrs = ('urlaubsvertretung',)
+dbAttrs = ('urlaubsvertretung', 'dateCreated')
 
 
 @app.route('/faelle_ma/', methods=['POST'])

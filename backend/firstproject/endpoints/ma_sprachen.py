@@ -10,7 +10,7 @@ from firstproject.app import app
 
 dbTable = 'tblMa_Sprachen'
 dbKeyAttrs = ('idMa', 'idSprache')
-dbAttrs = ()
+dbAttrs = ('dateCreated',)
 
 
 @app.route('/ma_sprachen/', methods=['POST'])

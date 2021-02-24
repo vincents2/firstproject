@@ -27,7 +27,8 @@ dbAttrs = (
   'idVertragArt',
   'fuehrungszeugnisAbgegeben',
   'idMaArt',
-  'aktiv'
+  'aktiv',
+  'dateCreated'
 )
 
 

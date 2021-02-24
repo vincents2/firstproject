@@ -18,6 +18,8 @@ export class FaelleComponent implements OnInit {
   @Input('faelle_jaMa') faelle_jaMa: Fall_JaMa[] = [];
   @Input('ma') ma: Ma[] = [];
   @Input('jaMa') jaMa: JaMa[] = [];
+  
+  selFall: Fall = { id: -1, nachname: '', archiviert: false };
 
   constructor() { }
 

@@ -11,7 +11,7 @@ from firstproject.app import app
 
 dbTable = 'tblSprachen'
 dbKeyAttrs = ('id',)
-dbAttrs = ('bez',)
+dbAttrs = ('bez', 'dateCreated')
 
 
 @app.route('/sprachen/', methods=['POST'])

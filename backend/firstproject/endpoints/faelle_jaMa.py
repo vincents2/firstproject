@@ -10,7 +10,7 @@ from firstproject.app import app
 
 dbTable = 'tblFaelle_JaMa'
 dbKeyAttrs = ('idFall', 'idJaMa')
-dbAttrs = ()
+dbAttrs = ('dateCreated',)
 
 
 @app.route('/faelle_jaMa/', methods=['POST'])

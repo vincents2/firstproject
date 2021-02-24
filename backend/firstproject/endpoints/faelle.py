@@ -34,7 +34,8 @@ dbAttrs = (
   'fahrtstreckenInKm',
   'fahrtenProMonat',
   'verweis',
-  'archiviert'
+  'archiviert',
+  'dateCreated'
 )
 
 

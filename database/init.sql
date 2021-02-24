@@ -23,27 +23,32 @@ DROP TABLE IF EXISTS tblVertragArten;
 
 CREATE TABLE tblVertragArten ( -- tblContractTypes
   id INT PRIMARY KEY AUTO_INCREMENT,
-  bez VARCHAR(32) NOT NULL
+  bez VARCHAR(32) NOT NULL,
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblHilfeArten ( -- tblHelpTypes
   id INT PRIMARY KEY AUTO_INCREMENT,
-  bez VARCHAR(32) NOT NULL
+  bez VARCHAR(32) NOT NULL,
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblBereiche ( -- tblAreas
   id INT PRIMARY KEY AUTO_INCREMENT,
-  bez VARCHAR(32) NOT NULL
+  bez VARCHAR(32) NOT NULL,
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblSprachen ( -- tblLanguages
   id INT PRIMARY KEY AUTO_INCREMENT,
-  bez VARCHAR(32) NOT NULL
+  bez VARCHAR(32) NOT NULL,
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblMaArten ( -- tblEmployeeTypes
   id INT PRIMARY KEY AUTO_INCREMENT,
-  bez VARCHAR(32) NOT NULL
+  bez VARCHAR(32) NOT NULL,
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblMa ( -- tblEmployees
@@ -63,17 +68,20 @@ CREATE TABLE tblMa ( -- tblEmployees
   idVertragArt INT REFERENCES tblVertragArten(id),
   fuehrungszeugnisAbgegeben BOOLEAN,
   idMaArt INT REFERENCES tblMaArten(id),
-  aktiv BOOLEAN
+  aktiv BOOLEAN,
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblMa_Sprachen ( -- tblEmployees_Languages
   idMa INT NOT NULL REFERENCES tblMa(id),
-  idSprache INT NOT NULL REFERENCES tblSprachen(id)
+  idSprache INT NOT NULL REFERENCES tblSprachen(id),
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblJa ( -- tblYWOs (YWO = Youth Welfare Office)
   id INT PRIMARY KEY AUTO_INCREMENT,
-  bez VARCHAR(32) NOT NULL
+  bez VARCHAR(32) NOT NULL,
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblJaMa ( -- tblYWOsEmployees
@@ -82,7 +90,8 @@ CREATE TABLE tblJaMa ( -- tblYWOsEmployees
   vorname VARCHAR(32),
   nachname VARCHAR(32) NOT NULL,
   telefon VARCHAR(32),
-  email VARCHAR(32)
+  email VARCHAR(32),
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblFaelle ( -- tblCases
@@ -110,13 +119,15 @@ CREATE TABLE tblFaelle ( -- tblCases
   fahrtstreckenInKm DECIMAL(4,1),
   fahrtenProMonat DECIMAL(4,1),
   verweis BOOLEAN,
-  archiviert BOOLEAN NOT NULL DEFAULT FALSE
+  archiviert BOOLEAN NOT NULL DEFAULT FALSE,
+  dateCreated DATE NOT NULL
 );
 
 CREATE TABLE tblZiele ( -- tblGoals
   id INT NOT NULL AUTO_INCREMENT,
   idFall INT NOT NULL REFERENCES tblFaelle(id),
   bez VARCHAR(32) NOT NULL,
+  dateCreated DATE NOT NULL,
   PRIMARY KEY (id,idFall)
 );
 
@@ -124,13 +135,15 @@ CREATE TABLE tblFaelle_Ma ( -- tblCases_Employees
   idFall INT NOT NULL REFERENCES tblFaelle(id),
   idMa INT NOT NULL REFERENCES tblMa(id),
   urlaubsvertretung BOOLEAN NOT NULL,
+  dateCreated DATE NOT NULL,
   PRIMARY KEY (idFall,idMa)
 );
 
 CREATE TABLE tblFaelle_JaMa ( -- tblCases_YWOsEmployees
   idFall INT NOT NULL REFERENCES tblFaelle(id),
   idJaMa INT NOT NULL REFERENCES tblJaMa(id),
-  primary key (idFall,idJaMa)
+  dateCreated DATE NOT NULL,
+  PRIMARY KEY (idFall,idJaMa)
 );
 
 -- log

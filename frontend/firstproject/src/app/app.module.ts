@@ -27,6 +27,7 @@ import { MaArtenComponent } from './ma-arten/ma-arten.component';
 import { MaComponent } from './ma/ma.component';
 import { SprachenComponent } from './sprachen/sprachen.component';
 import { VertragArtenComponent } from './vertrag-arten/vertrag-arten.component';
+import { DividerComponent } from './divider/divider.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { VertragArtenComponent } from './vertrag-arten/vertrag-arten.component';
     MaArtenComponent,
     MaComponent,
     SprachenComponent,
-    VertragArtenComponent
+    VertragArtenComponent,
+    DividerComponent
   ],
   imports: [
     BrowserModule,

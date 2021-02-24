@@ -13,7 +13,8 @@ dbTable = 'tblZiele'
 dbKeyAttrs = ('id',)
 dbAttrs = (
   'idFall',
-  'bez'
+  'bez',
+  'dateCreated'
 )
 
 

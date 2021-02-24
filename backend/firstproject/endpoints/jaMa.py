@@ -16,7 +16,8 @@ dbAttrs = (
   'vorname',
   'nachname',
   'telefon',
-  'email'
+  'email',
+  'dateCreated'
 )
 
 

@@ -11,7 +11,7 @@ from firstproject.app import app
 
 dbTable = 'tblHilfeArten'
 dbKeyAttrs = ('id',)
-dbAttrs = ('bez',)
+dbAttrs = ('bez', 'dateCreated')
 
 
 @app.route('/hilfeArten/', methods=['POST'])
