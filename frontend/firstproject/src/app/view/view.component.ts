@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SyncItem, HttpMethod, VertragArt, HilfeArt, Bereich, Sprache, MaArt, Ma, Ma_Sprache, Ja, JaMa, Fall, Ziel, Fall_Ma, Fall_JaMa } from './../common/common';
+import { SyncItem, HttpMethod, VertragArt, HilfeArt, Bereich, Sprache, MaArt, Ma, Ma_Sprache, Ja, JaMa, Fall, Ziel, Fall_Ma, Fall_JaMa } from '../common/interfaces';
 import { TemplateService } from '../services/template.service';
 import { VertragArtenService } from '../services/vertrag-arten.service';
 import { HilfeArtenService } from '../services/hilfe-arten.service';

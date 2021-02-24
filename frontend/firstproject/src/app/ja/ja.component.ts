@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Ja } from '../common/common';
+import { Ja } from '../common/interfaces';
 
 @Component({
   selector: 'app-ja',

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HilfeArt } from '../common/common';
+import { HilfeArt } from '../common/interfaces';
 
 @Component({
   selector: 'app-hilfe-arten',

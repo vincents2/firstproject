@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { VertragArt } from '../common/common';
+import { VertragArt } from '../common/interfaces';
 import { backendServer } from '../common/connection';
 
 @Injectable({

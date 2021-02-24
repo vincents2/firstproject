@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { VertragArt } from '../common/common';
+import { VertragArt } from '../common/interfaces';
 
 @Component({
   selector: 'app-vertrag-arten',

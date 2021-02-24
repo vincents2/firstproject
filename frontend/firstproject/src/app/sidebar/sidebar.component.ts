@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Bereich, Fall, HilfeArt, Ja, Ma, MaArt, Sprache, VertragArt } from '../common/common';
+import { Bereich, Fall, HilfeArt, Ja, Ma, MaArt, Sprache, VertragArt } from '../common/interfaces';
 
 @Component({
   selector: 'app-sidebar',

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Bereich } from '../common/common';
+import { Bereich } from '../common/interfaces';
 
 @Component({
   selector: 'app-bereiche',

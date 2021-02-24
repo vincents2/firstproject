@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Bereich, Fall, Fall_JaMa, Fall_Ma, HilfeArt, Ja, JaMa, Ma, Sprache, Ziel } from '../common/common';
+import { Bereich, Fall, Fall_JaMa, Fall_Ma, HilfeArt, Ja, JaMa, Ma, Sprache, Ziel } from '../common/interfaces';
 
 @Component({
   selector: 'app-faelle',

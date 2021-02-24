@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Fall_JaMa } from '../common/common';
+import { Fall_JaMa } from '../common/interfaces';
 import { backendServer } from '../common/connection';
 
 @Injectable({

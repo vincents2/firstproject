@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Ma_Sprache } from '../common/common';
+import { Ma_Sprache } from '../common/interfaces';
 import { backendServer } from '../common/connection';
 
 @Injectable({

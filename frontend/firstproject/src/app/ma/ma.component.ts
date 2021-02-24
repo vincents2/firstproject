@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Fall, Fall_Ma, Ma, MaArt, Sprache, VertragArt } from '../common/common';
+import { Fall, Fall_Ma, Ma, MaArt, Sprache, VertragArt } from '../common/interfaces';
 
 @Component({
   selector: 'app-ma',

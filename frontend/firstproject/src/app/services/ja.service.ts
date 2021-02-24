@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Ja } from '../common/common';
+import { Ja } from '../common/interfaces';
 import { backendServer } from '../common/connection';
 
 @Injectable({

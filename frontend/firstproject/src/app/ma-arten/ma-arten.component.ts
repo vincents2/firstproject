@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MaArt } from '../common/common';
+import { MaArt } from '../common/interfaces';
 
 @Component({
   selector: 'app-ma-arten',
