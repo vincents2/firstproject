@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -28,6 +29,7 @@ import { MaComponent } from './ma/ma.component';
 import { SprachenComponent } from './sprachen/sprachen.component';
 import { VertragArtenComponent } from './vertrag-arten/vertrag-arten.component';
 import { DividerComponent } from './divider/divider.component';
+import { FaelleFilterPipe } from './pipes/faelle-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -43,12 +45,15 @@ import { DividerComponent } from './divider/divider.component';
     MaComponent,
     SprachenComponent,
     VertragArtenComponent,
-    DividerComponent
+    DividerComponent,
+    FaelleFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     BereicheService,

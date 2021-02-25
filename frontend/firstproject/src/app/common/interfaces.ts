@@ -6,26 +6,23 @@ export interface SyncItem {
   item?: any;
 }
 
-interface BaseIdItem {
+interface BaseItem {
   id?: number;
   tempId?: number;
+  dateCreated: Date;
 }
 
-interface BaseItem extends BaseIdItem {
-  bez: string;
-}
+export interface VertragArt extends BaseItem { bez: string; }
 
-export interface VertragArt extends BaseItem { }
+export interface HilfeArt extends BaseItem { bez: string; }
 
-export interface HilfeArt extends BaseItem { }
+export interface Bereich extends BaseItem { bez: string; }
 
-export interface Bereich extends BaseItem { }
+export interface Sprache extends BaseItem { bez: string; }
 
-export interface Sprache extends BaseItem { }
+export interface MaArt extends BaseItem { bez: string; }
 
-export interface MaArt extends BaseItem { }
-
-export interface Ma extends BaseIdItem {
+export interface Ma extends BaseItem {
   anrede: string;
   vorname: string;
   nachname: string;
@@ -50,9 +47,9 @@ export interface Ma_Sprache {
   idSprache: number;
 }
 
-export interface Ja extends BaseItem { }
+export interface Ja extends BaseItem { bez: string; }
 
-export interface JaMa extends BaseIdItem {
+export interface JaMa extends BaseItem {
   idJa: number;
   anrede: string;
   vorname?: string;
@@ -61,7 +58,7 @@ export interface JaMa extends BaseIdItem {
   email?: string;
 }
 
-export interface Fall extends BaseIdItem {
+export interface Fall extends BaseItem {
   nachname: string;
   idJa?: number;
   bewilligtBisAufWeiteres?: boolean;
@@ -90,6 +87,7 @@ export interface Fall extends BaseIdItem {
 
 export interface Ziel extends BaseItem {
   idFall: number;
+  bez: string;
 }
 
 export interface Fall_Ma {

@@ -1,3 +1,8 @@
 2021-02-14T19:58:05.046834Z	   18 Connect	root@localhost on dbFirstproject using SSL/TLS
 2021-02-14T19:58:05.047215Z	   18 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_general_ci'
 2021-02-14T19:58:05.047419Z	   18 Query	SET @@session.autocommit = OFF
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+2021-02-25T17:29:15.847132Z	   26 Query	SET global log_output = file
+2021-02-25T17:29:17.379649Z	   26 Quit	

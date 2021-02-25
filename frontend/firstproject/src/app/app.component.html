@@ -4,11 +4,11 @@
     <app-topbar></app-topbar>
   </div>
   <div class="clear row">
-    <div class="clear col-md-2">
+    <div class="clear col-md-3">
       <app-sidebar
         (viewChanged)="view = $event;"></app-sidebar>
     </div>
-    <div class="clear col-md-10">
+    <div class="clear col-md-9">
       <app-view
         [view]="view"></app-view>
     </div>

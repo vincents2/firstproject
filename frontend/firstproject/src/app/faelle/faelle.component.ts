@@ -19,7 +19,8 @@ export class FaelleComponent implements OnInit {
   @Input('ma') ma: Ma[] = [];
   @Input('jaMa') jaMa: JaMa[] = [];
   
-  selFall: Fall = { id: -1, nachname: '', archiviert: false };
+  searchTerm = '';
+  item: any = null;
 
   constructor() { }
 

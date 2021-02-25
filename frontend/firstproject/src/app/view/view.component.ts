@@ -57,23 +57,19 @@ export class ViewComponent implements OnInit {
   
   ngOnInit(): void {
     let sync: SyncItem = { method: HttpMethod.GET }
-    let fakeItem: Bereich = {
-      bez: 'test bezeichnung'
-    }
-    // this.syncBereiche({ method: HttpMethod.POST, item: fakeItem })
-    // this.syncVertragArten(sync);
-    // this.syncHilfeArten(sync);
-    // this.syncBereiche(sync);
-    // this.syncSprachen(sync);
-    // this.syncMaArten(sync);
-    // this.syncMa(sync);
-    // this.syncMa_Sprachen(sync);
-    // this.syncJa(sync);
-    // this.syncJaMa(sync);
-    // this.syncFaelle(sync);
-    // this.syncZiele(sync);
-    // this.syncFaelle_Ma(sync);
-    // this.syncFaelle_JaMa(sync);
+    this.syncVertragArten(sync);
+    this.syncHilfeArten(sync);
+    this.syncBereiche(sync);
+    this.syncSprachen(sync);
+    this.syncMaArten(sync);
+    this.syncMa(sync);
+    this.syncMa_Sprachen(sync);
+    this.syncJa(sync);
+    this.syncJaMa(sync);
+    this.syncFaelle(sync);
+    this.syncZiele(sync);
+    this.syncFaelle_Ma(sync);
+    this.syncFaelle_JaMa(sync);
   }
 
   sync_singleEndpoint(sync: SyncItem, endpoint: string, array: any[]) {

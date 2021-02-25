@@ -62,10 +62,8 @@ def template_get_all(dbTable: str,dbKeyAttrs: list(),dbAttrs: list()):
     obj = {}
     for index in range(0, len(dbAllAttrs)):
       obj[dbAllAttrs[index]] = datetime.datetime.combine(row[index], datetime.time.min).isoformat() if isinstance(row[index], datetime.date) else row[index].isoformat() if isinstance(row[index], datetime.datetime) else row[index]
-    print('object = {}'.format(str(obj)))
     response.append(obj)
     json.dumps(response)
-    print('response = {}'.format(str(response)))
   
   if not response: status = 600
 

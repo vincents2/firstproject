@@ -1,10 +1,37 @@
 
 <div class="page">
+
   <nav class="navbar sticky-top navbar-light bg-light">
     <a class="navbar-brand" href="#">Fälle</a>
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        [(ngModel)]="searchTerm"
+        [ngModelOptions]="{ standalone: true }"
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Suchen"
+        aria-label="Suchen">
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+    </form>
   </nav>
+
   <app-divider [scope]="1"></app-divider>
-  <form>
-    test
-  </form>
+  
+  <div *ngIf="searchTerm">
+    <small>
+      <p class="secondary">Suchergebnisse für "{{ searchTerm }}":</p>
+    </small>
+    <div *ngFor="let fall in faelle | faelleFilter">
+      
+    </div>
+  </div>
+
+  <div *ngIf="!searchTerm && item">
+    
+  </div>
+
+  <div *ngIf="!searchTerm && !item">
+
+  </div>
+
 </div>
