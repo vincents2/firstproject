@@ -3,6 +3,16 @@
 
   <nav class="navbar sticky-top navbar-light bg-light">
     <a class="navbar-brand" href="#">Fälle</a>
+    <div class="nav-item dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
     <form class="form-inline my-2 my-lg-0">
       <input
         [(ngModel)]="searchTerm"
@@ -11,7 +21,6 @@
         type="search"
         placeholder="Suchen"
         aria-label="Suchen">
-      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
     </form>
   </nav>
 
@@ -27,11 +36,18 @@
   </div>
 
   <div *ngIf="!searchTerm && item">
-    
   </div>
 
   <div *ngIf="!searchTerm && !item">
-
   </div>
 
+</div>
+
+<div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+  <button class="btn btn-outline-primary" ngbDropdownToggle>Drop me</button>
+  <div class="dropdown-menu" ngbDropdownMenu>
+    <button ngbDropdownItem>One</button>
+    <button ngbDropdownItem>Two</button>
+    <button ngbDropdownItem>Four!</button>
+  </div>
 </div>

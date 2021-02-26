@@ -30,6 +30,7 @@ import { SprachenComponent } from './sprachen/sprachen.component';
 import { VertragArtenComponent } from './vertrag-arten/vertrag-arten.component';
 import { DividerComponent } from './divider/divider.component';
 import { FaelleFilterPipe } from './pipes/faelle-filter.pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { FaelleFilterPipe } from './pipes/faelle-filter.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [
     BereicheService,
